@@ -2,8 +2,6 @@
 
 ### 下载 Installation
 
-npx create-docusaurus@latest OhMySite classic
-
 ```shell
 $ npx create-docusaurus@latest OhMySite classic
 ```
