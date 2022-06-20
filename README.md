@@ -33,6 +33,8 @@ $ git pull
 $ git checkout -b gh-pages origin/gh-pages
 ```
 
+### GitHub 设置 Page 分支为 gh-pages
+
 ### 修改 docusaurus.config.js 下 git-page 推送分支
 
 ```js
