@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Oh My Site',
-  tagline: 'Weclome to My Site',
+  tagline: '欢迎来到我的站点',
   url: 'https://CodeBoyDD.github.io',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -91,8 +91,8 @@ const config = {
           {
             type: 'doc',
             docId: 'intro',
-            position: 'left',
             label: '记录',
+            position: 'left',
           },
           {
             to: '/blog', 
@@ -100,14 +100,14 @@ const config = {
             position: 'left'
           },
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/codeboydd',
             label: 'GitHub',
             position: 'right',
           },
         ],
       },
       footer: {
-        style: 'dark',
+        style: 'black',
         links: [
           {
             title: 'Docs',
@@ -139,8 +139,8 @@ const config = {
             title: 'More',
             items: [
               {
-                label: '博客',
-                to: '/blog',
+                label: 'WordPress站点',
+                href: 'http://175.178.36.6:85',
               },
               {
                 label: 'GitHub',
