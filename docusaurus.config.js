@@ -91,7 +91,7 @@ const config = {
           {
             type: 'doc',
             docId: 'intro',
-            label: '记录',
+            label: '笔记',
             position: 'left',
           },
           {

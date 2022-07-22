@@ -161,6 +161,22 @@ vim /etc/sudoers
 # wheel ALL=(ALL) ALL
 ```
 
+### 设置中文
+
+```shell
+vim /etc/locale.gen
+
+# 编辑/etc/locale.gen 文件，去掉zh_CN.UTF-8前面的#号,目的是生成中文语言
+locale-gen
+
+# 设置中文环境
+echo 'LANG="zh_CN.UTF-8" ' >> /etc/locale.conf
+
+# 设置局部的locale
+# 在使用的shell 的 .bashrc 或 .zshrc 加入
+echo 'export LC_ALL="zh_CN.UTF-8"' >> $HOME/.zshrc
+```
+
 ### 设置普通用户登录 ArchLinux
 
 查看用户id
