@@ -7,7 +7,7 @@ CentOS 下 LNMP 源码搭建
 1. [安装依赖](#安装依赖)
 2. [下载源码包](#下载源码包)
 3. [安装Nginx](#安装nginx)
-4. [安装MySQL](#安装mySQL)
+4. [安装MySQL](#安装mysql)
 5. [安装PHP](#安装php)
 6. [安装phpMyAdmin](#安装phpmyadmin)
 7. [安装PHP扩展](#安装php扩展)
@@ -285,7 +285,7 @@ server {
 ## 安装MySQL
 
 ### [官方安装文档](https://dev.mysql.com/doc/refman/8.0/en/installing-source-distribution.html)
-### [中文翻译文档][http://www.deituicms.com/mysql8cn/cn/web.html]
+### [中文翻译文档](http://www.deituicms.com/mysql8cn/cn/web.html)
 
 ### 卸载原来系统自带的MySQL及Mariadb
 
