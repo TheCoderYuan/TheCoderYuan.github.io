@@ -792,7 +792,7 @@ cd jpegsrc.v8b
 cd /root/php-8.0.12/ext/gd
 /usr/local/php/bin/phpize
 make clean
-./configure --with-freetype=/usr/local/freetype --with-jpeg=/usr/local/jpeg-8b --with-php-config=/usr/local/php/bin/php-config
+./configure --with-freetype-dir=/usr/local/freetype --with-jpeg-dir=/usr/local/jpeg-8b --with-php-config=/usr/local/php/bin/php-config
 ```
 
 #### 启用扩展
