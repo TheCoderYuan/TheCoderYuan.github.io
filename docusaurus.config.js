@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Oh My Site',
+  title: 'OH My Site',
   tagline: '欢迎来到我的站点',
   url: 'https://CodeBoyDD.github.io',
   baseUrl: '/',
@@ -82,7 +82,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Oh My Site',
+        title: 'OH My Site',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
