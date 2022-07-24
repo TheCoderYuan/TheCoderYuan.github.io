@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://CodeBoyDD.github.io/blog</id>
-    <title>Oh My Site Blog</title>
+    <title>OH My Site Blog</title>
     <updated>2021-08-26T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://CodeBoyDD.github.io/blog"/>
-    <subtitle>Oh My Site Blog</subtitle>
+    <subtitle>OH My Site Blog</subtitle>
     <icon>https://CodeBoyDD.github.io/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[Welcome]]></title>
