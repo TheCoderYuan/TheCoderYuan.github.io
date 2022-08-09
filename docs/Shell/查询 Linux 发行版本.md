@@ -14,6 +14,7 @@ echo $NAME
 还有一个
 
 ```shell
+#!/bin/bash
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
 	echo "当前操作系统: Linux"
     if [ -f /etc/redhat-release ]; then
