@@ -1,5 +1,7 @@
 # OhMySite 搭建流程
 
+## 初始化
+
 ### 下载 Installation
 
 ```shell
@@ -71,5 +73,22 @@ $ yarn deploy
 $ npm run start
 // or
 $ yarn run start
+```
+
+## 重新
+
+### 克隆项目
+```shell
+git clone https://github.com/CodeBoyDD/CodeBoyDD.github.io.git
+```
+
+### 安装依赖
+```shell
+npm install
+```
+
+### 本地开发
+```shell
+npm run start
 ```
 
