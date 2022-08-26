@@ -94,11 +94,11 @@ const config = {
             label: '笔记',
             position: 'left',
           },
-          {
-            to: '/blog', 
-            label: '博客', 
-            position: 'left'
-          },
+          // {
+          //   to: '/blog', 
+          //   label: '博客', 
+          //   position: 'left'
+          // },
           {
             href: 'https://github.com/codeboydd',
             label: 'GitHub',
