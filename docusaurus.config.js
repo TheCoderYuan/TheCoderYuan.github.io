@@ -42,18 +42,11 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/CodeBoyDD/CodeBoyDD.github.io/tree/master/',
+          editUrl: 'https://github.com/CodeBoyDD/CodeBoyDD.github.io/tree/master/',
+          routeBasePath: '/',
         },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/CodeBoyDD/CodeBoyDD.github.io/tree/master/',
-        },
+        // 关闭blog模块
+        blog: false,
         // theme: {
         //   customCss: require.resolve('./src/css/custom.css'),
         // },
@@ -63,17 +56,11 @@ const config = {
 
   // 中文搜索主题插件
   themes: [
-    // ... Your other themes.
     [
       require.resolve("@easyops-cn/docusaurus-search-local"),
       {
-        // ... Your options.
-        // `hashed` is recommended as long-term-cache of index file is possible.
         hashed: true,
-        // For Docs using Chinese, The `language` is recommended to set to:
-        // ```
         language: ["en", "zh"],
-        // ```
       },
     ],
   ],
@@ -81,24 +68,20 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      // 导航栏
       navbar: {
-        title: 'OH My Site',
-        logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
-        },
+        title: '不如说是笔记',
+        // logo: {
+        //   alt: 'My Site Logo',
+        //    src: 'img/logo.svg',
+        // },
         items: [
           {
             type: 'doc',
-            docId: 'intro',
+            docId: '项目简介',
             label: '笔记',
             position: 'left',
           },
-          // {
-          //   to: '/blog', 
-          //   label: '博客', 
-          //   position: 'left'
-          // },
           {
             href: 'https://github.com/codeboydd',
             label: 'GitHub',
@@ -106,54 +89,66 @@ const config = {
           },
         ],
       },
-      footer: {
-        style: 'dark',
-        links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'WordPress站点',
-                href: 'http://175.178.36.6:85',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/codeboydd',
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
-      },
+      // footer: {
+      //   style: 'dark',
+      //   links: [
+      //     {
+      //       title: 'Docs',
+      //       items: [
+      //         {
+      //           label: 'Tutorial',
+      //           to: '/docs/intro',
+      //         },
+      //       ],
+      //     },
+      //     {
+      //       title: 'Community',
+      //       items: [
+      //         {
+      //           label: 'Stack Overflow',
+      //           href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+      //         },
+      //         {
+      //           label: 'Discord',
+      //           href: 'https://discordapp.com/invite/docusaurus',
+      //         },
+      //         {
+      //           label: 'Twitter',
+      //           href: 'https://twitter.com/docusaurus',
+      //         },
+      //       ],
+      //     },
+      //     {
+      //       title: 'More',
+      //       items: [
+      //         {
+      //           label: 'WordPress站点',
+      //           href: 'http://175.178.36.6:85',
+      //         },
+      //         {
+      //           label: 'GitHub',
+      //           href: 'https://github.com/codeboydd',
+      //         },
+      //       ],
+      //     },
+      //   ],
+      //   copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      // },
       prism: {
-        theme: lightCodeTheme,
+        // 添加代码块高亮语法,开发时需重启服务
+        additionalLanguages: ['powershell','bash','php','sql'],
+        // 代码块主题
+        theme: darkCodeTheme,
         darkTheme: darkCodeTheme,
+      },
+      docs:{
+        // 侧边栏设置
+        sidebar:{
+          // 自动隐藏非焦点项目
+          autoCollapseCategories: true,
+          // 收起导航栏
+          hideable:true,
+        },
       },
     }),
 };
