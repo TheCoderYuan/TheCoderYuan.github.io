@@ -1,6 +1,6 @@
 {
     "label": "Shell",
-    "position": 5,
+    "position": 2,
     "link": {
       "type": "generated-index",
       "description": "下面是一些 Shell 脚本记录"
