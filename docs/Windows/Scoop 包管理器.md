@@ -9,6 +9,7 @@ authors:
     email: 2568951696@qq.com
 date: 2022-10-15
 ---
+
 # Scoop 包管理器
 
 :::info
