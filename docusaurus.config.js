@@ -21,10 +21,10 @@ const config = {
   trailingSlash: false,
 
   customFields: {
-  //  Put your custom environment here
-   GET_USER: 'CodeBoyDD',
-   USE_SSH: true,
-   DEPLOYMENT_BRANCH: 'gh-pages',
+    //  Put your custom environment here
+    GET_USER: 'CodeBoyDD',
+    USE_SSH: true,
+    DEPLOYMENT_BRANCH: 'gh-pages',
   },
 
   // Even if you don't use internalization, you can use this field to set useful
@@ -70,7 +70,7 @@ const config = {
     ({
       // 导航栏
       navbar: {
-        title: '不如说是笔记',
+        title: '笔记',
         // logo: {
         //   alt: 'My Site Logo',
         //    src: 'img/logo.svg',
@@ -136,18 +136,18 @@ const config = {
       // },
       prism: {
         // 添加代码块高亮语法,开发时需重启服务
-        additionalLanguages: ['powershell','bash','php','sql'],
+        additionalLanguages: ['powershell', 'bash', 'php', 'sql'],
         // 代码块主题
         theme: darkCodeTheme,
         darkTheme: darkCodeTheme,
       },
-      docs:{
+      docs: {
         // 侧边栏设置
-        sidebar:{
+        sidebar: {
           // 自动隐藏非焦点项目
           autoCollapseCategories: true,
           // 收起导航栏
-          hideable:true,
+          hideable: true,
         },
       },
     }),
