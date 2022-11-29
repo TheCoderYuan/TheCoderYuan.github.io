@@ -10,6 +10,7 @@ const config = {
   tagline: '欢迎来到我的站点',
   url: 'https://CodeBoyDD.github.io',
   baseUrl: '/',
+  staticDirectories: ['public', 'static'],
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
@@ -47,21 +48,11 @@ const config = {
         },
         // 关闭blog模块
         blog: false,
-        // theme: {
-        //   customCss: require.resolve('./src/css/custom.css'),
-        // },
+        theme: {
+          // 引入自定义css样式
+          customCss: require.resolve('./src/css/custom.css'),
+        },
       }),
-    ],
-  ],
-
-  // 中文搜索主题插件
-  themes: [
-    [
-      require.resolve("@easyops-cn/docusaurus-search-local"),
-      {
-        hashed: true,
-        language: ["en", "zh"],
-      },
     ],
   ],
 
@@ -71,10 +62,10 @@ const config = {
       // 导航栏
       navbar: {
         title: '笔记',
-        // logo: {
-        //   alt: 'My Site Logo',
-        //    src: 'img/logo.svg',
-        // },
+        logo: {
+          alt: 'My Site Logo',
+          src: 'img/logo.svg',
+        },
         items: [
           {
             type: 'doc',
@@ -89,54 +80,9 @@ const config = {
           },
         ],
       },
-      // footer: {
-      //   style: 'dark',
-      //   links: [
-      //     {
-      //       title: 'Docs',
-      //       items: [
-      //         {
-      //           label: 'Tutorial',
-      //           to: '/docs/intro',
-      //         },
-      //       ],
-      //     },
-      //     {
-      //       title: 'Community',
-      //       items: [
-      //         {
-      //           label: 'Stack Overflow',
-      //           href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-      //         },
-      //         {
-      //           label: 'Discord',
-      //           href: 'https://discordapp.com/invite/docusaurus',
-      //         },
-      //         {
-      //           label: 'Twitter',
-      //           href: 'https://twitter.com/docusaurus',
-      //         },
-      //       ],
-      //     },
-      //     {
-      //       title: 'More',
-      //       items: [
-      //         {
-      //           label: 'WordPress站点',
-      //           href: 'http://175.178.36.6:85',
-      //         },
-      //         {
-      //           label: 'GitHub',
-      //           href: 'https://github.com/codeboydd',
-      //         },
-      //       ],
-      //     },
-      //   ],
-      //   copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
-      // },
       prism: {
         // 添加代码块高亮语法,开发时需重启服务
-        additionalLanguages: ['powershell', 'bash', 'php', 'sql'],
+        additionalLanguages: ['powershell', 'php', 'sql', 'nginx'],
         // 代码块主题
         theme: darkCodeTheme,
         darkTheme: darkCodeTheme,

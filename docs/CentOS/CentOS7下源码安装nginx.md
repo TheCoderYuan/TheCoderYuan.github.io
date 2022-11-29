@@ -7,16 +7,23 @@ authors:
     url: https://github.com/codeboydd
     image_url: https://github.com/codeboydd.png
     email: 2568951696@qq.com
-date: 2022-10-18
+date: 2022-11-29
 ---
 
 :::info
 
 CentOS 7 下源码安装 Nginx 并使用 systemctl 管理 nginx 服务
 
+这里的Nginx是搭配PHP使用的,所以建议Nginx用户与PHP用户一致,以便共同管理web项目及权限分配
+
 :::
 
-## 下载 Nginx 源码包
+### yum安装依赖
+```shell
+sudo yum install -y gcc-c++ pcre pcre-devel zlib zlib-devel openssl openssl-devel
+```
+
+### 下载 Nginx 源码包
 ```shell
 wget http://nginx.org/download/nginx-1.18.0.tar.gz
 ```
@@ -27,9 +34,9 @@ wget http://nginx.org/download/nginx-1.18.0.tar.gz
 tar -zxvf nginx-1.18.0.tar.gz && cd nginx-1.18.0
 ```
 
-## 创建 nginx 用户及用户组
+### 创建 nginx 应用的用户及用户组 www:www
 ```shell
-sudo groupadd nginx && sudo useradd -r -g nginx -s /sbin/nologin nginx
+sudo groupadd www && sudo useradd -r -g www -s /sbin/nologin www
 ```
 
 :::info
@@ -40,8 +47,8 @@ sudo groupadd nginx && sudo useradd -r -g nginx -s /sbin/nologin nginx
 
 :::
 
-## 配置 Nginx 安装选项
-```shell
+### 配置 Nginx 安装选项(较全)
+```shell showLineNumbers
 ./configure \
 --prefix=/usr/local/nginx \
 --sbin-path=/usr/local/nginx/sbin/nginx \
@@ -72,22 +79,34 @@ sudo groupadd nginx && sudo useradd -r -g nginx -s /sbin/nologin nginx
 
 :::
 
-## 编译安装
+### 配置
+
+> 无特殊配置默认一下即可
+
+```shell showLineNumbers
+./configure \
+--prefix=/usr/local/nginx \
+--user=www \
+--group=www \
+--with-http_ssl_module
+```
+
+### 编译安装
 ```shell
 sudo make -j $(nproc) && sudo make install
 ```
 
-## 创建软连接
+### 创建软连接
 ```shell
 sudo ln -s /usr/local/nginx/sbin/nginx /usr/bin/
 ```
 
-## 设置nginx应用目录权限
+### 设置nginx应用目录权限
 ```shell
-sudo chown -R nginx:nginx /usr/local/nginx && sudo chmod -R 755 /usr/local/nginx
+sudo chown -R www:www /usr/local/nginx && sudo chmod -R 755 /usr/local/nginx
 ```
 
-## 使用systemctl管理nginx服务
+### 使用systemctl管理nginx服务
 ```shell
 sudo vim /usr/lib/systemd/system/nginx.service
 ```
@@ -110,17 +129,17 @@ PrivateTmp=true
 WantedBy=multi-user.target
 ```
 
-## nginx服务授权 && 重载服务服务
+### nginx服务授权 && 重载服务服务
 ```shell
 sudo chmod 755 /usr/lib/systemd/system/nginx.service && sudo systemctl daemon-reload
 ```
 
-## 开放80端口防火墙 && 重载防火墙服务
+### 开放80端口防火墙 && 重载防火墙服务
 ```shell
 sudo firewall-cmd --zone=public --add-port=80/tcp --permanent && sudo firewall-cmd --reload
 ```
 
-## nginx服务命令
+### nginx服务命令
 ```shell
 systemctl start nginx       # 开启nginx
 systemctl status nginx      # 关闭nginx

@@ -5,7 +5,7 @@
 编写 Nginx 配置文件 vhosts/file.conf
 
 
-```shell
+```nginx title=vhosts/file.conf showLineNumbers
 autoindex on;			# 显示目录
 autoindex_exact_size on;# 显示文件大小
 autoindex_localtime on;	# 显示文件时间
